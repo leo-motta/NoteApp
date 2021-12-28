@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/noteHomeFragment">
+
+    <fragment
+        android:id="@+id/noteHomeFragment"
+        android:name="com.leonardomotta.noteapp.home.NoteHomeFragment"
+        android:label="fragment_note_home"
+        tools:layout="@layout/fragment_note_home">
+        <action
+            android:id="@+id/action_noteHomeFragment_to_noteEditorFragment"
+            app:destination="@id/noteEditorFragment" />
+        <action
+            android:id="@+id/action_noteHomeFragment_to_noteDataFragment"
+            app:destination="@id/noteDataFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/noteEditorFragment"
+        android:name="com.leonardomotta.noteapp.editor.NoteEditorFragment"
+        android:label="fragment_note_editor"
+        tools:layout="@layout/fragment_note_editor" >
+        <action
+            android:id="@+id/action_noteEditorFragment_to_noteHomeFragment"
+            app:destination="@id/noteHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/noteDataFragment"
+        android:name="com.leonardomotta.noteapp.data.NoteDataFragment"
+        android:label="fragment_note_data"
+        tools:layout="@layout/fragment_note_data" >
+        <argument
+            android:name="noteKey"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_noteDataFragment_to_noteUpdateFragment"
+            app:destination="@id/noteUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteUpdateFragment"
+        android:name="com.leonardomotta.noteapp.update.NoteUpdateFragment"
+        android:label="fragment_note_update"
+        tools:layout="@layout/fragment_note_update">
+        <argument
+            android:name="noteKey"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_noteUpdateFragment_to_noteDataFragment"
+            app:destination="@id/noteDataFragment"
+            app:popUpTo="@id/noteHomeFragment" />
+        <action
+            android:id="@+id/action_noteUpdateFragment_to_noteHomeFragment"
+            app:destination="@id/noteHomeFragment" />
+    </fragment>
+
+</navigation>
