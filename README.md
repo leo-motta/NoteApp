@@ -20,3 +20,4 @@ This project uses the following Jetpack Architecture Components:
   <img src="https://github.com/leo-motta/NoteApp/blob/main/screenshots/02.png" width="200">
   <img src="https://github.com/leo-motta/NoteApp/blob/main/screenshots/03.png" width="200">
 </div>
+
