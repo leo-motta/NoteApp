@@ -12,7 +12,7 @@ This project uses the following Jetpack Architecture Components:
 * Room
 * RecyclerView
 
-## Screenshoots
+## Screenshots
 
 <div class="column">
   <img src="https://github.com/leo-motta/NoteApp/blob/main/screenshots/00.png" width="200">
